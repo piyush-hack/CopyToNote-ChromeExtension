@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="style.css" rel="stylesheet" />
+    <link href="mainStyle.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- <iframe src="https://noteyard.piyushdev.xyz/notes" frameborder="0"></iframe> -->
+    <!-- Section: Design Block -->
+
+    <div class="ldiv">
+        <div class="loader loader1"></div>
+        <div class="loader loader2"></div>
+        <div class="loader loader3"></div>
+        <div class="loader loader4"></div>
+    </div>
+
+    <div class="pi-slide-wrap">
+        <header class="pi-slide light">
+            <label for="pi-slide-1-trigger">Cloud Notes</label>
+            <label for="pi-slide-2-trigger">Login</label>
+            <label for="pi-slide-3-trigger">Local Notes</label>
+            <label for="pi-slide-4-trigger">Settings</label>
+        </header>
+
+        <input id="pi-slide-1-trigger" type="radio" name="slides" checked />
+        <section class="pi-main-slide allNotes">
+            <br /><br />
+            <h1>Login To Get Your Notes!!</h1>
+        </section>
+
+        <input id="pi-slide-2-trigger" type="radio" name="slides" />
+        <section class="pi-main-slide loginSection">
+            <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+                <div class="container">
+                    <div class="row gx-lg-5 align-items-center">
+                        <div class="col-lg-6 mb-5 mb-lg-0">
+                            <h1 class="my-5 display-3 fw-bold ls-tight">
+                                Login To Notes <br />
+                                <span class="text-primary">by Entering Token</span>
+                            </h1>
+                            <p style="color: hsl(217, 10%, 50.8%)">
+                                You Need A Token Provided By The Offical
+                                <a href="https://noteyard.piyushdev.xyz/login">Website</a>
+                                During Login To Login To This Extension .
+                            </p>
+                            <p class="clg"></p>
+                        </div>
+
+                        <div class="col-lg-6 mb-5 mb-lg-0">
+                            <div class="card">
+                                <div class="card-body py-5 px-md-5">
+                                    <form id="noteform">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <input type="text" id="loginToken" class="form-control" />
+                                                    <label class="form-label" for="loginToken">Login Token</label>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <input type="text" id="noteToken" class="form-control" />
+                                                    <label class="form-label" for="noteToken">Note Token</label>
+                                                </div>
+                                            </div> -->
+                                        </div>
+
+                                        <div class="form-check d-flex justify-content-center mb-4">
+                                            <input class="form-check-input me-2" type="checkbox" value=""
+                                                id="form2Example33" checked />
+                                            <label class="form-check-label" for="form2Example33">
+                                                Remember Me
+                                            </label>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary btn-block mb-4">
+                                            Login
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <input id="pi-slide-3-trigger" type="radio" name="slides" />
+        <section class="pi-main-slide localNotessec">
+            <br /><br /><br />
+            <h4 style="position: inherit; padding: 20px 35px" id="hln">
+                Local Storage Notes
+            </h4>
+            <button type="button" id="newLnBtn" class="btn btn-outline-secondary ripple-surface-dark"
+                data-mdb-ripple-color="dark" style="float: right; margin: 14px">
+                New
+            </button>
+            <br /><br /><br />
+            <div class="localNotes">
+                <!-- <h1>No Local Notes Here Yet!</h1> -->
+            </div>
+        </section>
+        <input id="pi-slide-4-trigger" type="radio" name="slides" />
+        <section class="pi-main-slide settings" id="settings">
+            <br /><br /><br />
+            <div class="setRow">
+                <h4>Cloud Upload Mode</h4>
+                <input type="checkbox" class="ts" id="csem" />
+            </div>
+            <br />
+            <div class="setRow">
+                <h4>Copy Without Styling</h4>
+                <input type="checkbox" class="ts" id="swsm" />
+            </div>
+            <br />
+            <div class="setRow">
+                <h4>
+                    Join With Breaks
+                    <span><a class="button" href="#popup1"><i class="fa-solid fa-circle-info"></i></a></span>
+                    <div id="popup1" class="overlay">
+                        <div class="popup">
+                            <h2>How This Switch Works</h2>
+                            <a class="close" href="#settings">&times;</a>
+                            <div class="content">
+                                If the switch is <b>off</b> then it means that it will seperate text with <b>spaces</b> by the entered amount. 
+                                <br>
+                                If the switch is <b>on</b> then it means that it will seperate text with <b>line breaks</b> by the entered amount. 
+                                <br>
+                                One need to enter the amount and then toogle the switch to apply changes.
+                                <br>
+                                <b>For e.g : </b> Entering 2 and then toogling the switch to 'on' will sperates lines with 2 breaks . Entering 2 and then toogling the switch to 'off' will seperate lines with 2 spaces
+                            </div>
+                        </div>
+                    </div>
+                </h4>
+                <div>
+                    <input type="number" min="0" class="ts" id="cbrosp" value="1" />
+                    <input type="checkbox" class="ts" id="jwbr" />
+                </div>
+            </div>
+            <br />
+            <hr />
+            <div class="setRow">
+                <h4>Delete All Local Notes And Reset App</h4>
+                <input type="checkbox" class="ts" id="resa" />
+            </div>
+            <!-- <div class="setRow">
+                <h4>Cloud Upload Mode</h4>
+                <input type="checkbox">
+            </div> -->
+        </section>
+    </div>
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- Section: Design Block -->
+</body>
+
+</html>
